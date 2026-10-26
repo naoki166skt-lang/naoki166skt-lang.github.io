@@ -3,201 +3,308 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>腹黒田 尚輝 | よろしくお願いします</title>
+<title>腹黒田 丈太郎 | 闇のプリンス、島根より参上</title>
 <style>
-:root{
-  --gold:#e6b422;
-  --cream:#fff6e5;
-  --brown:#3b2416;
-  --amber:#f3c96b;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
-  color:var(--cream);
-  background:radial-gradient(circle at 20% 15%, #a8341f 0%, #6d1b12 45%, #3b0d08 100%);
-  min-height:100vh;
-  overflow-x:hidden;
-}
-.glow{
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(230,180,34,.28), transparent 40%),
-    radial-gradient(circle at 15% 80%, rgba(255,170,60,.18), transparent 45%);
-  pointer-events:none;
-  z-index:0;
-}
-header{
-  position:relative;
-  z-index:1;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:28px 6vw;
-  border-bottom:1px solid rgba(230,180,34,.35);
-}
-.brand{
-  font-size:1.25rem;
-  letter-spacing:.18em;
-  color:var(--amber);
-  text-shadow:0 0 14px rgba(230,180,34,.45);
-}
-nav a{
-  color:var(--cream);
-  text-decoration:none;
-  margin-left:28px;
-  font-size:.95rem;
-  letter-spacing:.1em;
-  transition:.25s;
-}
-nav a:hover{color:var(--gold);text-shadow:0 0 10px rgba(230,180,34,.7)}
-main{
-  position:relative;
-  z-index:1;
-  max-width:1000px;
-  margin:0 auto;
-  padding:12vh 6vw 10vh;
-  text-align:center;
-}
-.eyebrow{
-  display:inline-block;
-  padding:8px 22px;
-  border:1px solid rgba(230,180,34,.55);
-  border-radius:999px;
-  color:var(--amber);
-  font-size:.85rem;
-  letter-spacing:.35em;
-  margin-bottom:34px;
-}
-h1{
-  font-size:clamp(2.6rem,7vw,5rem);
-  line-height:1.15;
-  letter-spacing:.06em;
-  background:linear-gradient(90deg,#ffe9a8,#e6b422 45%,#fff3c4);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  text-shadow:0 0 40px rgba(230,180,34,.25);
-}
-.name{
-  display:block;
-  margin-top:18px;
-  font-size:clamp(1.2rem,3vw,1.7rem);
-  color:var(--cream);
-  letter-spacing:.25em;
-}
-.lead{
-  margin:36px auto 0;
-  max-width:620px;
-  font-size:1.05rem;
-  line-height:2.1;
-  color:rgba(255,246,229,.86);
-}
-.divider{
-  width:110px;
-  height:1px;
-  margin:44px auto;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
-}
-.cta{
-  display:inline-block;
-  margin-top:8px;
-  padding:16px 44px;
-  border:1px solid var(--gold);
-  border-radius:999px;
-  color:var(--gold);
-  text-decoration:none;
-  letter-spacing:.22em;
-  background:rgba(230,180,34,.08);
-  transition:.3s;
-}
-.cta:hover{
-  background:linear-gradient(90deg,#e6b422,#ffdf8a);
-  color:var(--brown);
-  box-shadow:0 0 34px rgba(230,180,34,.45);
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:22px;
-  margin-top:80px;
-  text-align:left;
-}
-.card{
-  padding:30px;
-  border:1px solid rgba(230,180,34,.28);
-  border-radius:16px;
-  background:linear-gradient(160deg,rgba(255,246,229,.08),rgba(0,0,0,.18));
-  backdrop-filter:blur(6px);
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-6px);
-  border-color:rgba(230,180,34,.65);
-  box-shadow:0 18px 44px rgba(0,0,0,.35);
-}
-.card h2{
-  color:var(--amber);
-  font-size:1.1rem;
-  letter-spacing:.14em;
-  margin-bottom:12px;
-}
-.card p{
-  font-size:.95rem;
-  line-height:1.9;
-  color:rgba(255,246,229,.82);
-}
-footer{
-  position:relative;
-  z-index:1;
-  padding:34px;
-  text-align:center;
-  font-size:.8rem;
-  letter-spacing:.2em;
-  color:rgba(255,246,229,.55);
-  border-top:1px solid rgba(230,180,34,.25);
-}
+  :root{
+    --black:#07070a;
+    --ink:#101018;
+    --gold:#d4af37;
+    --gold-soft:#f3d98b;
+    --purple:#3b1f5e;
+    --red:#8b1d3a;
+    --text:#eae6dd;
+    --muted:#a9a49a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(circle at 15% 10%, rgba(139,29,58,.28), transparent 32%),
+      radial-gradient(circle at 85% 20%, rgba(59,31,94,.35), transparent 38%),
+      radial-gradient(circle at 50% 100%, rgba(212,175,55,.14), transparent 45%),
+      var(--black);
+    color:var(--text);
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+    line-height:1.8;
+    overflow-x:hidden;
+  }
+  .noise{
+    position:fixed;inset:0;pointer-events:none;z-index:999;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px);
+    mix-blend-mode:overlay;
+  }
+  header{
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+    text-align:center;
+    padding:6rem 1.5rem 4rem;
+    position:relative;
+  }
+  .crown{
+    font-size:3rem;color:var(--gold);
+    text-shadow:0 0 24px rgba(212,175,55,.7);
+    animation:float 4s ease-in-out infinite;
+  }
+  @keyframes float{50%{transform:translateY(-10px)}}
+  h1{
+    font-size:clamp(2.4rem,7vw,5rem);
+    letter-spacing:.08em;
+    background:linear-gradient(90deg,#f7e7a6,var(--gold),#8a6a19,#f7e7a6);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 0 18px rgba(212,175,55,.35));
+    margin:.5rem 0;
+  }
+  .lead{
+    max-width:44rem;margin:1.2rem auto 0;color:var(--muted);
+  }
+  .badge{
+    display:inline-block;margin-top:1.6rem;
+    border:1px solid rgba(212,175,55,.5);
+    color:var(--gold-soft);
+    padding:.55rem 1.2rem;border-radius:999px;
+    background:rgba(212,175,55,.07);
+    letter-spacing:.12em;
+  }
+  .scroll{
+    position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
+    color:var(--gold);font-size:.8rem;letter-spacing:.3em;
+  }
+  section{
+    max-width:68rem;margin:0 auto;padding:5rem 1.5rem;
+  }
+  .section-title{
+    text-align:center;margin-bottom:2.5rem;
+  }
+  .section-title h2{
+    font-size:clamp(1.7rem,4vw,2.6rem);
+    color:var(--gold-soft);letter-spacing:.1em;
+  }
+  .section-title p{
+    color:var(--muted);font-size:.95rem;margin-top:.5rem;
+  }
+  .card{
+    background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+    border:1px solid rgba(212,175,55,.22);
+    border-radius:1.2rem;
+    padding:2rem;
+    box-shadow:0 18px 50px rgba(0,0,0,.55);
+    backdrop-filter:blur(6px);
+  }
+  .grid{
+    display:grid;gap:1.5rem;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  }
+  .chara{
+    display:grid;gap:2rem;align-items:center;
+    grid-template-columns:minmax(220px,320px) 1fr;
+  }
+  @media(max-width:760px){.chara{grid-template-columns:1fr;text-align:center}}
+  .chara svg{width:100%;height:auto;filter:drop-shadow(0 0 25px rgba(212,175,55,.25))}
+  .name{
+    font-size:1.6rem;color:var(--gold);font-weight:700;
+  }
+  .quote{
+    border-left:3px solid var(--gold);
+    padding-left:1rem;color:var(--gold-soft);
+    font-style:italic;margin:1rem 0;
+  }
+  .spots{
+    display:grid;gap:1.2rem;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  }
+  .spot{
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:1rem;padding:1.6rem;
+    background:linear-gradient(160deg,rgba(59,31,94,.35),rgba(7,7,10,.75));
+    transition:.3s;
+  }
+  .spot:hover{
+    transform:translateY(-6px);
+    border-color:var(--gold);
+    box-shadow:0 0 35px rgba(212,175,55,.18);
+  }
+  .spot h3{color:var(--gold-soft);margin-bottom:.5rem}
+  .spot p{color:var(--muted);font-size:.92rem}
+  .tag{
+    display:inline-block;font-size:.72rem;
+    border:1px solid rgba(212,175,55,.4);color:var(--gold);
+    border-radius:999px;padding:.15rem .65rem;margin-bottom:.7rem;
+  }
+  .digital-list{list-style:none;display:grid;gap:1rem}
+  .digital-list li{
+    padding:1rem 1.2rem;border-radius:.8rem;
+    background:rgba(255,255,255,.04);
+    border-left:3px solid var(--red);
+  }
+  .digital-list strong{color:var(--gold-soft)}
+  footer{
+    text-align:center;padding:3rem 1rem 4rem;
+    color:var(--muted);font-size:.8rem;
+    border-top:1px solid rgba(212,175,55,.18);
+  }
+  footer .gold{color:var(--gold)}
 </style>
 </head>
 <body>
-<div class="glow"></div>
+<div class="noise"></div>
+
 <header>
-  <div class="brand">HARAGUROTA NAOKI</div>
-  <nav>
-    <a href="#profile">プロフィール</a>
-    <a href="#message">メッセージ</a>
-    <a href="#contact">お問い合わせ</a>
-  </nav>
+  <div>
+    <div class="crown">♛</div>
+    <h1>腹黒田 丈太郎</h1>
+    <p class="lead">
+      「腹黒い、けれど誠実。」<br>
+      闇をまとい、金の輝きを纏う島根発・デジタル時代の策士。<br>
+      その名は、腹黒田 丈太郎。
+    </p>
+    <span class="badge">SHIMANE × DIGITAL × GOTHIC LUXURY</span>
+  </div>
+  <div class="scroll">SCROLL ▼</div>
 </header>
 
-<main>
-  <span class="eyebrow">WELCOME</span>
-  <h1>
-    腹黒田 尚輝です。<span class="name">よろしくお願いします。</span>
-  </h1>
-  <p class="lead">
-    はじめまして。温かさと輝きを大切にしながら、新しい出会いと学びを楽しむウェブサイトです。
-  </p>
-  <div class="divider"></div>
-  <a class="cta" href="#message">メッセージを見る</a>
+<section id="profile">
+  <div class="section-title">
+    <h2>PROFILE</h2>
+    <p>自己紹介 / ゆるキャラ「クロテン丸」</p>
+  </div>
 
-  <section class="cards" id="profile">
-    <article class="card">
-      <h2>はじめまして</h2>
-      <p>腹黒田です。日々の学びや興味のあることを丁寧に、わかりやすく発信していきます。</p>
-    </article>
-    <article class="card" id="message">
-      <h2>大切にしたいこと</h2>
-      <p>好奇心、誠実さ、そして周囲の人とのつながり。どんなことにも前向きに取り組みます。</p>
-    </article>
-    <article class="card" id="contact">
-      <h2>これから</h2>
-      <p>新しい挑戦を重ねながら、成長の記録を残していきます。どうぞよろしくお願いします。</p>
-    </article>
-  </section>
-</main>
+  <div class="card chara">
+    <svg viewBox="0 0 240 260" role="img" aria-label="ゆるキャラ クロテン丸">
+      <defs>
+        <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2b2b38"/>
+          <stop offset="1" stop-color="#0b0b10"/>
+        </linearGradient>
+        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f7e7a6"/>
+          <stop offset="1" stop-color="#b8860b"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="120" cy="240" rx="78" ry="12" fill="rgba(212,175,55,.15)"/>
+      <path d="M45 150 Q40 55 120 45 Q200 55 195 150 Q195 215 120 215 Q45 215 45 150Z" fill="url(#body)" stroke="url(#gold)" stroke-width="4"/>
+      <path d="M70 120 Q120 70 170 120" stroke="url(#gold)" stroke-width="3" fill="none"/>
+      <circle cx="90" cy="125" r="12" fill="#fff"/>
+      <circle cx="150" cy="125" r="12" fill="#fff"/>
+      <circle cx="93" cy="127" r="6" fill="#111"/>
+      <circle cx="147" cy="127" r="6" fill="#111"/>
+      <path d="M100 160 Q120 178 140 160" stroke="#e8e2d6" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M75 150 Q88 158 80 166" stroke="#8b1d3a" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M165 150 Q152 158 160 166" stroke="#8b1d3a" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M104 42 L120 18 L136 42 Z" fill="url(#gold)"/>
+      <circle cx="120" cy="12" r="5" fill="url(#gold)"/>
+      <path d="M52 175 Q35 195 48 210 Q62 200 62 185Z" fill="#1a1a24" stroke="url(#gold)" stroke-width="3"/>
+      <path d="M188 175 Q205 195 192 210 Q178 200 178 185Z" fill="#1a1a24" stroke="url(#gold)" stroke-width="3"/>
+      <text x="120" y="252" text-anchor="middle" fill="#d4af37" font-size="14" font-family="sans-serif">クロテン丸</text>
+    </svg>
 
-<footer>© 2026 HARAGUROTA NAOKI</footer>
+    <div>
+      <p class="name">腹黒田 丈太郎（はらぐろだ じょうたろう）</p>
+      <p class="quote">「計算はする。でも、裏切らない。」</p>
+      <p>
+        島根県松江市出身。一見クールで策略家っぽいが、実は地域と人を何より大切にする「闇のプリンス」。
+        相談役のゆるキャラは、黒い体に金の冠をいただいた <strong>クロテン丸</strong>。
+        得意技は「沈黙のニヤリ」、弱点は宍道湖の夕日と出雲そば。
+      </p>
+      <p style="margin-top:1rem;color:var(--muted)">
+        趣味：地図を見ながら旅の計画を立てること、行政サービスを観察すること、ゲームと音楽。<br>
+        座右の銘：<span class="gold">「闇の中でも、道は照らせる。」</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="message">
+  <div class="section-title">
+    <h2>MESSAGE</h2>
+    <p>みなさまへ、そして未来へ</p>
+  </div>
+  <div class="card">
+    <p>
+      はじめまして。腹黒田 丈太郎です。よろしくお願いします。<br><br>
+      「腹黒い」と聞くと、少し怪しい印象を受けるかもしれません。けれど私の「腹黒さ」は、
+      人の気持ちを深く考え、地元の課題まで考え抜く、<strong>思考の黒さ</strong>です。
+      表面的な華やかさだけでなく、見えにくい悩みや地域の課題にも目を向けたい。<br><br>
+      デジタル新時代において、必要なのは技術そのものではなく、
+      <strong>技術を誰のために、どう使うのか</strong>という視点です。
+      高齢者も子どもも、都会も地方も、誰もが取り残されない社会。
+      私はその橋渡しになる存在でありたいと思います。
+    </p>
+    <p class="quote" style="margin-top:1.5rem">
+      「闇は、光を隠すためのものではない。光を際立たせるためのものだ。」
+    </p>
+  </div>
+</section>
+
+<section id="digital">
+  <div class="section-title">
+    <h2>DIGITAL VISION</h2>
+    <p>デジタル新時代に向けての抱負</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3 style="color:var(--gold-soft)">誰も置き去りにしない</h3>
+      <p>スマートフォンや行政デジタルサービスに不慣れな方へ、丁寧に寄り添う支援の輪を広げます。島根県でも、地域のデジタル活用を支える人材育成やデジタルデバイド対策が進められています。[18]</p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--gold-soft)">地域のDXを育てる</h3>
+      <p>中小企業や商店、農林水産業がデジタル技術で課題を解決できるよう、伴走型の支援と人材育成を大切にします。島根県でもDX推進や専門家派遣、導入支援の取り組みが行われています。[15][13]</p>
+    </div>
+    <div class="card">
+      <h3 style="color:var(--gold-soft)">伝統と未来をつなぐ</h3>
+      <p>神話、工芸、歴史、自然。島根の魅力をデジタル表現で世界へ発信し、「古いもの」と「新しいもの」が共存する地域文化をつくります。</p>
+    </div>
+  </div>
+  <ul class="digital-list" style="margin-top:1.8rem">
+    <li><strong>目標 1：</strong>「使えない」ではなく「使い方がわからない」と言える社会へ。</li>
+    <li><strong>目標 2：</strong>島根の観光・産業・文化を、デジタルでより遠くへ届ける。</li>
+    <li><strong>目標 3：</strong>便利さだけでなく、安心・信頼・人間関係を守るデジタル活用を広める。</li>
+  </ul>
+</section>
+
+<section id="shimane">
+  <div class="section-title">
+    <h2>SHIMANE PR</h2>
+    <p>腹黒田丈太郎が愛す、神々と歴史の大地</p>
+  </div>
+  <div class="spots">
+    <article class="spot">
+      <span class="tag">縁結び</span>
+      <h3>出雲大社</h3>
+      <p>「いづも」という言葉は古くから「多くの神々が集う地」を意味するとされます。全国から参拝者が訪れる、島根を代表する聖地です。[14][22]</p>
+    </article>
+    <article class="spot">
+      <span class="tag">国宝</span>
+      <h3>松江城</h3>
+      <p>現存する12天守の一つで、国宝にも指定された美しい天守。堀川遊覧船や城下町散策と合わせて、水の都・松江を満喫できます。[11][14]</p>
+    </article>
+    <article class="spot">
+      <span class="tag">世界遺産</span>
+      <h3>石見銀山</h3>
+      <p>かつて日本を代表する銀産地として栄えた石見銀山。坑道跡や大森の町並みには、自然と人々の暮らしが調和した歴史が息づいています。[11][14]</p>
+    </article>
+    <article class="spot">
+      <span class="tag">美の殿堂</span>
+      <h3>足立美術館</h3>
+      <p>日本庭園の美しさで知られる足立美術館も島根の誇り。静けさの中に広がる庭園は、まるで一幅の絵画のようです。[11]</p>
+    </article>
+    <article class="spot">
+      <span class="tag">神秘の島々</span>
+      <h3>隠岐諸島</h3>
+      <p>ユネスコ世界ジオパークに認定された隠岐諸島。雄大な海岸線と独自の文化が、島根の自然のスケールを教えてくれます。[11]</p>
+    </article>
+    <article class="spot">
+      <span class="tag">夕日の名所</span>
+      <h3>宍道湖</h3>
+      <p>夕日百選にも選ばれた宍道湖の夕景。湖面を金色に染める夕日は、腹黒田丈太郎のお気に入りの「闇と光の境界線」です。[11]</p>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <span class="gold">腹黒田 丈太郎</span> ／ ゆるキャラ：クロテン丸</p>
+  <p>闇は深く、心は誠実に。島根から、未来へ。</p>
+</footer>
 </body>
 </html>
