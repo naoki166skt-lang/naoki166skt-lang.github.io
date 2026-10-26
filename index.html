@@ -1,14 +1,203 @@
 <!DOCTYPE html>
 <html lang="ja">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title lang="ja">メフィラスウェブサイト</title>
- </head>
- <body>
-  <article>
-   <h1 lang="ja">メフィラスウェブサイト</h1>
-  <p>このウェブサイトは、メフィラスが作成したものです。</p>
-  </article>
- </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>さかたなおき | よろしくお願いします</title>
+<style>
+:root{
+  --gold:#e6b422;
+  --cream:#fff6e5;
+  --brown:#3b2416;
+  --amber:#f3c96b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+  color:var(--cream);
+  background:radial-gradient(circle at 20% 15%, #a8341f 0%, #6d1b12 45%, #3b0d08 100%);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+.glow{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(230,180,34,.28), transparent 40%),
+    radial-gradient(circle at 15% 80%, rgba(255,170,60,.18), transparent 45%);
+  pointer-events:none;
+  z-index:0;
+}
+header{
+  position:relative;
+  z-index:1;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:28px 6vw;
+  border-bottom:1px solid rgba(230,180,34,.35);
+}
+.brand{
+  font-size:1.25rem;
+  letter-spacing:.18em;
+  color:var(--amber);
+  text-shadow:0 0 14px rgba(230,180,34,.45);
+}
+nav a{
+  color:var(--cream);
+  text-decoration:none;
+  margin-left:28px;
+  font-size:.95rem;
+  letter-spacing:.1em;
+  transition:.25s;
+}
+nav a:hover{color:var(--gold);text-shadow:0 0 10px rgba(230,180,34,.7)}
+main{
+  position:relative;
+  z-index:1;
+  max-width:1000px;
+  margin:0 auto;
+  padding:12vh 6vw 10vh;
+  text-align:center;
+}
+.eyebrow{
+  display:inline-block;
+  padding:8px 22px;
+  border:1px solid rgba(230,180,34,.55);
+  border-radius:999px;
+  color:var(--amber);
+  font-size:.85rem;
+  letter-spacing:.35em;
+  margin-bottom:34px;
+}
+h1{
+  font-size:clamp(2.6rem,7vw,5rem);
+  line-height:1.15;
+  letter-spacing:.06em;
+  background:linear-gradient(90deg,#ffe9a8,#e6b422 45%,#fff3c4);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 0 40px rgba(230,180,34,.25);
+}
+.name{
+  display:block;
+  margin-top:18px;
+  font-size:clamp(1.2rem,3vw,1.7rem);
+  color:var(--cream);
+  letter-spacing:.25em;
+}
+.lead{
+  margin:36px auto 0;
+  max-width:620px;
+  font-size:1.05rem;
+  line-height:2.1;
+  color:rgba(255,246,229,.86);
+}
+.divider{
+  width:110px;
+  height:1px;
+  margin:44px auto;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.cta{
+  display:inline-block;
+  margin-top:8px;
+  padding:16px 44px;
+  border:1px solid var(--gold);
+  border-radius:999px;
+  color:var(--gold);
+  text-decoration:none;
+  letter-spacing:.22em;
+  background:rgba(230,180,34,.08);
+  transition:.3s;
+}
+.cta:hover{
+  background:linear-gradient(90deg,#e6b422,#ffdf8a);
+  color:var(--brown);
+  box-shadow:0 0 34px rgba(230,180,34,.45);
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  margin-top:80px;
+  text-align:left;
+}
+.card{
+  padding:30px;
+  border:1px solid rgba(230,180,34,.28);
+  border-radius:16px;
+  background:linear-gradient(160deg,rgba(255,246,229,.08),rgba(0,0,0,.18));
+  backdrop-filter:blur(6px);
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(230,180,34,.65);
+  box-shadow:0 18px 44px rgba(0,0,0,.35);
+}
+.card h2{
+  color:var(--amber);
+  font-size:1.1rem;
+  letter-spacing:.14em;
+  margin-bottom:12px;
+}
+.card p{
+  font-size:.95rem;
+  line-height:1.9;
+  color:rgba(255,246,229,.82);
+}
+footer{
+  position:relative;
+  z-index:1;
+  padding:34px;
+  text-align:center;
+  font-size:.8rem;
+  letter-spacing:.2em;
+  color:rgba(255,246,229,.55);
+  border-top:1px solid rgba(230,180,34,.25);
+}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<header>
+  <div class="brand">SAKATA NAOKI</div>
+  <nav>
+    <a href="#profile">プロフィール</a>
+    <a href="#message">メッセージ</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+</header>
+
+<main>
+  <span class="eyebrow">WELCOME</span>
+  <h1>
+    さかたなおきです。<span class="name">よろしくお願いします。</span>
+  </h1>
+  <p class="lead">
+    はじめまして。温かさと輝きを大切にしながら、新しい出会いと学びを楽しむウェブサイトです。
+  </p>
+  <div class="divider"></div>
+  <a class="cta" href="#message">メッセージを見る</a>
+
+  <section class="cards" id="profile">
+    <article class="card">
+      <h2>はじめまして</h2>
+      <p>さかたなおきです。日々の学びや興味のあることを丁寧に、わかりやすく発信していきます。</p>
+    </article>
+    <article class="card" id="message">
+      <h2>大切にしたいこと</h2>
+      <p>好奇心、誠実さ、そして周囲の人とのつながり。どんなことにも前向きに取り組みます。</p>
+    </article>
+    <article class="card" id="contact">
+      <h2>これから</h2>
+      <p>新しい挑戦を重ねながら、成長の記録を残していきます。どうぞよろしくお願いします。</p>
+    </article>
+  </section>
+</main>
+
+<footer>© 2026 SAKATA NAOKI</footer>
+</body>
 </html>
